@@ -1,5 +1,17 @@
-.my-sticky-element {
+body {
+	margin-top: 800px;
+	height: 3000px;
+}
+.project01 {
 	height: 300px;
 	width: 900px;
 	background-color: yellow;
+	opacity: 0;
+	transform: translateY(50px);
+	transition: all 1s ease-out;
+}
+
+.project01.fade-in {
+	opacity: 1;
+	transform: translateY(0);
 }
