@@ -5,14 +5,17 @@ $(document).ready(function(){
 	// build a scene
 	var ourScene = new ScrollMagic.Scene({
 		triggerElement: '#project01',
-		duration: 400
+		duration: '90%',
+		triggerHook: 0
+		// 0 - 1 page hight trigger fade scene
 	})
 	.setClassToggle('#project01', 'fade-in')
 	.addIndicators({
 		name: 'fade scene',
 		colorTrigger: 'black',
-		indent: 200,
-		colorStart: '#75C695'
+		colorStart: '#75C695',
+		colorEnd: 'pink'
+		// indent: 200,
 	})
 	.addTo(controller);
 });
