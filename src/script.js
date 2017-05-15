@@ -2,14 +2,18 @@ $(document).ready(function(){
 	// init scroll magic
 	var controller = new ScrollMagic.Controller();
 
+	// loop throught each project
+	$('.project').each(function(){
+
 	// build a scene
 	var ourScene = new ScrollMagic.Scene({
-		triggerElement: '#project01',
+		triggerElement: this.children[0],
 		duration: '90%',
-		triggerHook: 0
+		triggerHook: 0.9
+		// reverse: false
 		// 0 - 1 page hight trigger fade scene
 	})
-	.setClassToggle('#project01', 'fade-in')
+	.setClassToggle(this, 'fade-in')
 	.addIndicators({
 		name: 'fade scene',
 		colorTrigger: 'black',
@@ -18,6 +22,9 @@ $(document).ready(function(){
 		// indent: 200,
 	})
 	.addTo(controller);
+
+	});
+
 });
 
  
