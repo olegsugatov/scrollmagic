@@ -3,7 +3,7 @@ $(document).ready(function(){
 	var controller = new ScrollMagic.Controller();
         
         // pin the into
-        var pinIntoScene = new ScrollMagin.Scene({
+        var pinIntoScene = new ScrollMagic.Scene({
             triggerElement: '#intro',
             triggerHook: 0,
             duration: '30%'      
