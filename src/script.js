@@ -10,6 +10,22 @@ $(document).ready(function(){
         })
         .setPin('#intro', {pushFollowers: false})
         .addTo(controller);
+        
+        // parallax scene
+
+        var parallaxTL = new TimelineMax();
+       	parallaxTL
+       		.from('.content-wrapper', 0.4, {autoAlpha: 0, ease:Power0.easeNone}, 0.4)
+       		.from('.bcg', 2, {y: '-50%', ease:Power0.easeNone}, 0)
+       		;
+
+        var slideParallaxScene = new ScrollMagic.Scene({
+            triggerElement: '.bcg-parallax',
+            triggerHook: 1,
+            duration: '100%'  
+        })
+        .setTween(parallaxTL)
+        .addTo(controller);
 
 
 	// loop throught each project
